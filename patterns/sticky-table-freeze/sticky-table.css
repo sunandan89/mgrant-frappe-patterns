@@ -1,0 +1,70 @@
+/**
+ * sticky-table-freeze
+ *
+ * Pure CSS pattern for freezing header rows and left columns
+ * in scrollable HTML tables.
+ *
+ * CRITICAL: The table MUST use border-collapse: separate.
+ * border-collapse: collapse silently breaks position: sticky on <th>.
+ */
+
+/* Scroll container — set a fixed height/width or let the parent constrain it */
+.stf-scroll-container {
+  overflow: auto;
+  max-height: 600px;       /* adjust to your layout */
+  /* max-width: 100%;      /* uncomment if parent doesn't constrain width */
+  position: relative;
+}
+
+/* Table base — the critical rule is border-collapse: separate */
+.stf-table {
+  border-collapse: separate;  /* REQUIRED for sticky to work */
+  border-spacing: 0;          /* keeps visual identical to collapse */
+  width: max-content;
+  background: #fff;
+}
+
+/* Base cell styling */
+.stf-table th,
+.stf-table td {
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Header rows — frozen vertically */
+.stf-table thead th {
+  position: sticky;
+  z-index: 9;
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+/* Multi-row header positions — adjust px values to match your row heights */
+.stf-table thead tr:nth-child(1) th { top: 0; }
+.stf-table thead tr:nth-child(2) th { top: 25px; }
+.stf-table thead tr:nth-child(3) th { top: 50px; }
+
+/* Frozen left columns — apply to both <th> and <td> */
+.stf-frozen {
+  position: sticky;
+  z-index: 10;
+  background: #f8f9fa;
+}
+
+/* Frozen cells that are ALSO in the header get the highest z-index */
+.stf-table thead .stf-frozen {
+  z-index: 15 !important;
+  background: #f3f4f6;
+}
+
+/* Data rows — alternate striping (optional) */
+.stf-table tbody tr:nth-child(even) td {
+  background: #fafbfc;
+}
+
+/* Ensure frozen data cells in striped rows keep their background */
+.stf-table tbody tr:nth-child(even) .stf-frozen {
+  background: #f0f1f3;
+}

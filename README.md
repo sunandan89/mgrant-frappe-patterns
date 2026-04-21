@@ -8,6 +8,11 @@ Reusable utility code and patterns for Frappe v16 development at Dhwani RIS. Eac
 |---------|-------------|----------|
 | [Fuzzy Search](patterns/fuzzy-search/) | Typo-tolerant client-side search using trigram similarity. Catches 1–2 char typos with zero dependencies. | CHB, Client Script, Page |
 | [Shadow DOM Keyboard Fix](patterns/shadow-dom-keyboard-fix/) | Prevents Frappe's Awesomebar from hijacking keyboard input inside Custom HTML Blocks. | CHB only |
+| [Wrapper Guard](patterns/frappe-wrapper-guard/) | Prevents Frappe's form refresh from wiping custom HTML rendered into an HTML field. | Client Script |
+| [Sticky Table Freeze](patterns/sticky-table-freeze/) | Pure CSS frozen headers + frozen left columns for scrollable HTML tables. Fixes the `border-collapse` trap. | Client Script, CHB, Page |
+| [Sequential Save](patterns/frappe-sequential-save/) | Recursive promise chain for saving multiple Frappe documents without lock conflicts. | Client Script, CHB, Page |
+| [Client-Side XLSX Export](patterns/client-side-xlsx-export/) | Styled Excel workbook generation in the browser using xlsx-js-style CDN. Core + optional utilities. | Client Script, CHB, Page |
+| [DOM Data Scraper](patterns/frappe-dom-data-scraper/) | Reads live input values from the DOM instead of stale `frm.doc` for custom-rendered UIs. | Client Script, CHB |
 
 ## How to use
 
@@ -30,8 +35,9 @@ Each pattern folder contains:
 
 ## Context
 
-These patterns emerged from building mGrant features (Stories of Change, NGO Directory, Document Repository) on Frappe v16 with `developer_mode` off. They solve real problems encountered during development and are tested on the mGrant staging instance.
+These patterns emerged from building mGrant features (Stories of Change, NGO Directory, Document Repository, LIC HFL Budget Allocation) on Frappe v16 with `developer_mode` off. They solve real problems encountered during development and are tested on the mGrant staging instance.
 
 ## Related repos
 
-- [mgrant-stories-of-change](https://github.com/sunandan89/mgrant-stories-of-change) — Stories of Change feature (uses both patterns above)
+- [mgrant-stories-of-change](https://github.com/sunandan89/mgrant-stories-of-change) — Stories of Change feature (uses fuzzy-search + shadow-dom-keyboard-fix)
+- [lic-hfl-budget-allocation](https://github.com/sunandan89/lic-hfl-budget-allocation) — LIC HFL Budget Allocation feature (uses wrapper-guard, sticky-table-freeze, sequential-save, xlsx-export, dom-data-scraper)
