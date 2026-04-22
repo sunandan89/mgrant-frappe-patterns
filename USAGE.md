@@ -8,15 +8,16 @@ Tracks where each pattern has been used across projects and features. This helps
 
 | Pattern | Total Uses | Projects |
 |---------|-----------|----------|
-| fuzzy-search | 1 | mgrant-stories-of-change |
-| shadow-dom-keyboard-fix | 1 | mgrant-stories-of-change |
-| frappe-tab-wrapper-access | 1 | mgrant-stories-of-change |
-| form-read-view-overlay | 1 | mgrant-stories-of-change |
-| remote-client-script-deploy | 2 | mgrant-stories-of-change |
+| fuzzy-search | 2 | mgrant-stories-of-change, mgrant-document-repository |
+| shadow-dom-keyboard-fix | 2 | mgrant-stories-of-change, mgrant-document-repository |
+| frappe-tab-wrapper-access | 2 | mgrant-stories-of-change, mgrant-document-repository |
+| form-read-view-overlay | 2 | mgrant-stories-of-change, mgrant-document-repository |
+| remote-client-script-deploy | 3 | mgrant-stories-of-change, mgrant-document-repository |
+| client-side-xlsx-export | 2 | lic-hfl-budget-allocation, mgrant-document-repository |
+| jszip-bulk-download | 1 | mgrant-document-repository |
 | frappe-wrapper-guard | 1 | lic-hfl-budget-allocation |
 | sticky-table-freeze | 1 | lic-hfl-budget-allocation |
 | frappe-sequential-save | 1 | lic-hfl-budget-allocation |
-| client-side-xlsx-export | 1 | lic-hfl-budget-allocation |
 | frappe-dom-data-scraper | 1 | lic-hfl-budget-allocation |
 
 ## By Project
@@ -31,6 +32,18 @@ Tracks where each pattern has been used across projects and features. This helps
 | form-read-view-overlay | Story Form Read-View | reference | 2026-04-22 |
 | remote-client-script-deploy | Story Form Read-View | reference | 2026-04-22 |
 | remote-client-script-deploy | Story Form Compact | reference | 2026-04-20 |
+
+### mgrant-document-repository
+
+| Pattern | Feature | Type | Date |
+|---------|---------|------|------|
+| form-read-view-overlay | Document Registry Form View | inline | 2026-04-22 |
+| frappe-tab-wrapper-access | Document Registry Form View | inline | 2026-04-22 |
+| remote-client-script-deploy | Document Registry Form View | inline | 2026-04-22 |
+| fuzzy-search | Document Repository CHB | inline | 2026-04-21 |
+| shadow-dom-keyboard-fix | Document Repository CHB | inline | 2026-04-21 |
+| client-side-xlsx-export | Document Repository CHB | inline | 2026-04-21 |
+| jszip-bulk-download | Document Repository CHB | inline | 2026-04-21 |
 
 ### lic-hfl-budget-allocation
 

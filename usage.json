@@ -112,6 +112,69 @@
       "usageType": "inline",
       "addedDate": "2026-04-20",
       "notes": "Reads live input values from custom-rendered budget grid"
+    },
+    {
+      "pattern": "form-read-view-overlay",
+      "project": "mgrant-document-repository",
+      "feature": "Document Registry Form View",
+      "file": "mgrant_document_repository/doctype/document_registry/document_registry.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-22",
+      "notes": "Core overlay functions (getTabWrapper + buildReadViewOverlay) inlined as-is. Custom renderContent builds document detail layout with inline image preview, SVG icons, contextual chips, and conditional section cards."
+    },
+    {
+      "pattern": "frappe-tab-wrapper-access",
+      "project": "mgrant-document-repository",
+      "feature": "Document Registry Form View",
+      "file": "mgrant_document_repository/doctype/document_registry/document_registry.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-22",
+      "notes": "getTabWrapper() inlined via form-read-view-overlay to find details_tab"
+    },
+    {
+      "pattern": "fuzzy-search",
+      "project": "mgrant-document-repository",
+      "feature": "Document Repository CHB",
+      "file": "mgrant_document_repository/custom_html_block/document_repository.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-21",
+      "notes": "Trigram fuzzy search on document list — file name, partner, source record, category"
+    },
+    {
+      "pattern": "shadow-dom-keyboard-fix",
+      "project": "mgrant-document-repository",
+      "feature": "Document Repository CHB",
+      "file": "mgrant_document_repository/custom_html_block/document_repository.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-21",
+      "notes": "Awesomebar hijack fix on CHB search input"
+    },
+    {
+      "pattern": "client-side-xlsx-export",
+      "project": "mgrant-document-repository",
+      "feature": "Document Repository CHB",
+      "file": "mgrant_document_repository/custom_html_block/document_repository.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-21",
+      "notes": "Export document registry table to XLSX with SheetJS"
+    },
+    {
+      "pattern": "jszip-bulk-download",
+      "project": "mgrant-document-repository",
+      "feature": "Document Repository CHB",
+      "file": "mgrant_document_repository/custom_html_block/document_repository.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-21",
+      "notes": "Bulk download selected files as ZIP using JSZip CDN"
+    },
+    {
+      "pattern": "remote-client-script-deploy",
+      "project": "mgrant-document-repository",
+      "feature": "Document Registry Form View",
+      "file": "deploy.py",
+      "usageType": "inline",
+      "addedDate": "2026-04-22",
+      "notes": "Client Script deployed to staging via REST API (deploy.py step 6)"
     }
   ]
 }
