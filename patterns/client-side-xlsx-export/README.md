@@ -93,3 +93,8 @@ Client Scripts, Custom HTML Blocks, Frappe Pages — any browser context where y
 ## Origin
 
 Extracted from the LIC HFL Budget Allocation feature, which generates a 3-sheet styled Excel workbook matching the LIC HFL budget format — with colour-coded headers, INR currency formatting, merged cells, and sheet protection.
+
+## Used in
+
+- **LIC HFL Budget Allocation** (Client Script) — origin project
+- **Document Repository** hub (Custom HTML Block) — `mgrant-document-repository` repo

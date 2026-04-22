@@ -96,3 +96,4 @@ From the Stories of Change hub on mGrant staging:
 
 - **Stories of Change** hub (Custom HTML Block) — `mgrant-stories-of-change` repo
 - **NGO Directory** hub (Custom HTML Block) — handoff provided
+- **Document Repository** hub (Custom HTML Block) — `mgrant-document-repository` repo

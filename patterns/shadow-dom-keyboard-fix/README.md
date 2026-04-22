@@ -81,3 +81,4 @@ This issue was discovered and fixed during the **Stories of Change** hub develop
 
 - **Stories of Change** hub (Custom HTML Block)
 - **NGO Directory** hub (Custom HTML Block)
+- **Document Repository** hub (Custom HTML Block) — `mgrant-document-repository` repo
