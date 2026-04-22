@@ -1,0 +1,117 @@
+{
+  "_schema": {
+    "description": "Pattern usage tracking for mgrant-frappe-patterns",
+    "version": 1,
+    "updated": "2026-04-22",
+    "fields": {
+      "pattern": "Pattern folder name",
+      "project": "GitHub repo or project identifier",
+      "feature": "Specific feature/module within the project",
+      "file": "File where the pattern is used",
+      "usageType": "inline (copied into code) | import (loaded as module) | reference (informed approach)",
+      "addedDate": "ISO date when usage was recorded",
+      "notes": "Optional context"
+    }
+  },
+  "usages": [
+    {
+      "pattern": "fuzzy-search",
+      "project": "mgrant-stories-of-change",
+      "feature": "Stories of Change Hub",
+      "file": "deployment/custom-html-block/stories-of-change-hub.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-19",
+      "notes": "Trigram search on story cards — title, NGO, theme, district"
+    },
+    {
+      "pattern": "shadow-dom-keyboard-fix",
+      "project": "mgrant-stories-of-change",
+      "feature": "Stories of Change Hub",
+      "file": "deployment/custom-html-block/stories-of-change-hub.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-19",
+      "notes": "Awesomebar hijack fix on hub search input inside CHB shadow DOM"
+    },
+    {
+      "pattern": "frappe-tab-wrapper-access",
+      "project": "mgrant-stories-of-change",
+      "feature": "Story Form Read-View",
+      "file": "deployment/client-script/story-of-change-read-view.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-22",
+      "notes": "Tab lookup for injecting article overlay into Story tab"
+    },
+    {
+      "pattern": "form-read-view-overlay",
+      "project": "mgrant-stories-of-change",
+      "feature": "Story Form Read-View",
+      "file": "deployment/client-script/story-of-change-read-view.js",
+      "usageType": "reference",
+      "addedDate": "2026-04-22",
+      "notes": "Pattern was extracted FROM this feature — the original implementation"
+    },
+    {
+      "pattern": "remote-client-script-deploy",
+      "project": "mgrant-stories-of-change",
+      "feature": "Story Form Read-View",
+      "file": "deployment/client-script/story-of-change-read-view.js",
+      "usageType": "reference",
+      "addedDate": "2026-04-22",
+      "notes": "Client Script deployed via frappe.xcall from browser console"
+    },
+    {
+      "pattern": "remote-client-script-deploy",
+      "project": "mgrant-stories-of-change",
+      "feature": "Story Form Compact",
+      "file": "deployment/client-script/story-of-change-compact.js",
+      "usageType": "reference",
+      "addedDate": "2026-04-20",
+      "notes": "Compact form script deployed via same remote method"
+    },
+    {
+      "pattern": "frappe-wrapper-guard",
+      "project": "lic-hfl-budget-allocation",
+      "feature": "Budget Allocation Form",
+      "file": "budget_allocation_client_script.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-20",
+      "notes": "Guards cummulative_budget HTML field from Frappe refresh wipe"
+    },
+    {
+      "pattern": "sticky-table-freeze",
+      "project": "lic-hfl-budget-allocation",
+      "feature": "Budget Allocation Form",
+      "file": "budget_allocation_client_script.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-20",
+      "notes": "Frozen headers + left column on budget grid table"
+    },
+    {
+      "pattern": "frappe-sequential-save",
+      "project": "lic-hfl-budget-allocation",
+      "feature": "Budget Allocation Form",
+      "file": "budget_allocation_client_script.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-20",
+      "notes": "Sequential save of 20+ Non-Programmatic budget rows"
+    },
+    {
+      "pattern": "client-side-xlsx-export",
+      "project": "lic-hfl-budget-allocation",
+      "feature": "Budget Export",
+      "file": "budget_allocation_client_script.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-20",
+      "notes": "Multi-sheet Excel export of budget allocation data"
+    },
+    {
+      "pattern": "frappe-dom-data-scraper",
+      "project": "lic-hfl-budget-allocation",
+      "feature": "Budget Allocation Form",
+      "file": "budget_allocation_client_script.js",
+      "usageType": "inline",
+      "addedDate": "2026-04-20",
+      "notes": "Reads live input values from custom-rendered budget grid"
+    }
+  ]
+}

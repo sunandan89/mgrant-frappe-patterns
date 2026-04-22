@@ -19,6 +19,9 @@ Each pattern is a self-contained utility that solves a specific, recurring probl
 5. **frappe-sequential-save** — recursive promise chain to save multiple Frappe docs without lock conflicts
 6. **client-side-xlsx-export** — styled Excel workbook generation in the browser via xlsx-js-style CDN
 7. **frappe-dom-data-scraper** — reads live DOM input values instead of stale frm.doc for custom-rendered UIs
+8. **frappe-tab-wrapper-access** — safe Tab Break wrapper lookup for Frappe v16 (fields_dict doesn't work, use layout.tabs[])
+9. **form-read-view-overlay** — presentation-mode overlay on a form tab with Edit button to restore the form
+10. **remote-client-script-deploy** — create/update/patch Client Scripts via frappe.xcall when developer_mode is off
 
 Do NOT re-discover any of the above — they're already extracted.
 
