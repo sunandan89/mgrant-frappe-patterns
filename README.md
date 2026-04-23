@@ -16,6 +16,7 @@ Reusable utility code and patterns for Frappe v16 development at Dhwani RIS. Eac
 | [Tab Wrapper Access](patterns/frappe-tab-wrapper-access/) | Safe accessor for Tab Break wrappers in Frappe v16 — `fields_dict` doesn't work, use `layout.tabs[]`. | Client Script |
 | [Form Read-View Overlay](patterns/form-read-view-overlay/) | Presentation-mode overlay on a form tab with Edit button to restore the standard form. | Client Script |
 | [Remote Client Script Deploy](patterns/remote-client-script-deploy/) | Create/update/patch Client Scripts via `frappe.xcall` when `developer_mode` is off. | Browser Console |
+| [Link Field Parent Filter](patterns/link-field-parent-filter/) | Filters Link dropdowns to values from a parent doc's child tables. Auto-fills when one option. | Client Script |
 
 ## How to use
 

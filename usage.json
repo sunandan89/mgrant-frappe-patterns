@@ -2,7 +2,7 @@
   "_schema": {
     "description": "Pattern usage tracking for mgrant-frappe-patterns",
     "version": 1,
-    "updated": "2026-04-22",
+    "updated": "2026-04-23",
     "fields": {
       "pattern": "Pattern folder name",
       "project": "GitHub repo or project identifier",
@@ -175,6 +175,15 @@
       "usageType": "inline",
       "addedDate": "2026-04-22",
       "notes": "Client Script deployed to staging via REST API (deploy.py step 6)"
+    },
+    {
+      "pattern": "link-field-parent-filter",
+      "project": "mgrant-stories-of-change",
+      "feature": "Story Form Workflow",
+      "file": "deployment/client-script/story-of-change-workflow.js",
+      "usageType": "reference",
+      "addedDate": "2026-04-23",
+      "notes": "Filters theme dropdown to Grant's custom_project_theme; auto-fills state/district from Grant child tables"
     }
   ]
 }

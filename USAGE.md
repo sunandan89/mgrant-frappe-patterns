@@ -19,6 +19,7 @@ Tracks where each pattern has been used across projects and features. This helps
 | sticky-table-freeze | 1 | lic-hfl-budget-allocation |
 | frappe-sequential-save | 1 | lic-hfl-budget-allocation |
 | frappe-dom-data-scraper | 1 | lic-hfl-budget-allocation |
+| link-field-parent-filter | 1 | mgrant-stories-of-change |
 
 ## By Project
 
@@ -32,6 +33,7 @@ Tracks where each pattern has been used across projects and features. This helps
 | form-read-view-overlay | Story Form Read-View | reference | 2026-04-22 |
 | remote-client-script-deploy | Story Form Read-View | reference | 2026-04-22 |
 | remote-client-script-deploy | Story Form Compact | reference | 2026-04-20 |
+| link-field-parent-filter | Story Form Workflow | reference | 2026-04-23 |
 
 ### mgrant-document-repository
 
