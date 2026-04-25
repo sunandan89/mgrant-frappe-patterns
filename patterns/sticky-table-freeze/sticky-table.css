@@ -6,65 +6,90 @@
  *
  * CRITICAL: The table MUST use border-collapse: separate.
  * border-collapse: collapse silently breaks position: sticky on <th>.
+ *
+ * Updated with learnings from LIC HFL Budget Allocation v9:
+ * - table-layout: fixed for width stability
+ * - max-width on frozen columns to prevent auto-expansion
+ * - overflow: auto (not overflow-x) for vertical scroll
+ * - max-height: 70vh for responsive vertical scroll
+ * - Frozen separator visual (border + shadow)
+ * - Gotcha: overflow:hidden conflicts with position:sticky
  */
 
-/* Scroll container — set a fixed height/width or let the parent constrain it */
+/* Scroll container — responsive height, both-axis scroll */
 .stf-scroll-container {
-  overflow: auto;
-  max-height: 600px;       /* adjust to your layout */
-  /* max-width: 100%;      /* uncomment if parent doesn't constrain width */
+  overflow: auto;               /* BOTH axes — not just overflow-x */
+  max-height: 70vh;             /* responsive to viewport */
+  border: 1px solid #ddd;
+  margin: 12px 0;
   position: relative;
+  -webkit-overflow-scrolling: touch;  /* smooth scroll on iOS */
 }
 
-/* Table base — the critical rule is border-collapse: separate */
+/* Table base — critical rules */
 .stf-table {
-  border-collapse: separate;  /* REQUIRED for sticky to work */
-  border-spacing: 0;          /* keeps visual identical to collapse */
-  width: max-content;
+  border-collapse: separate;    /* REQUIRED for sticky to work */
+  border-spacing: 0;            /* keeps visual identical to collapse */
+  table-layout: fixed;          /* forces browser to respect declared widths */
+  width: max-content;           /* enables horizontal scroll */
   background: #fff;
 }
 
 /* Base cell styling */
 .stf-table th,
 .stf-table td {
-  padding: 4px 8px;
-  border: 1px solid #d1d5db;
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
   font-size: 12px;
   white-space: nowrap;
+  text-align: center;
 }
 
 /* Header rows — frozen vertically */
 .stf-table thead th {
   position: sticky;
   z-index: 9;
-  background: #f3f4f6;
+  background: #f5f5f5;
   font-weight: 600;
 }
 
 /* Multi-row header positions — adjust px values to match your row heights */
-.stf-table thead tr:nth-child(1) th { top: 0; }
-.stf-table thead tr:nth-child(2) th { top: 25px; }
-.stf-table thead tr:nth-child(3) th { top: 50px; }
+.stf-table thead tr:nth-child(1) th { top: 0; z-index: 11; }
+.stf-table thead tr:nth-child(2) th { top: 33px; z-index: 11; }
+.stf-table thead tr:nth-child(3) th { top: 66px; z-index: 11; }
 
 /* Frozen left columns — apply to both <th> and <td> */
 .stf-frozen {
   position: sticky;
   z-index: 10;
-  background: #f8f9fa;
+  background: #fafafa;
 }
 
-/* Frozen cells that are ALSO in the header get the highest z-index */
+/* Frozen cells in header rows — highest z-index */
 .stf-table thead .stf-frozen {
-  z-index: 15 !important;
-  background: #f3f4f6;
+  z-index: 20 !important;
+}
+
+/* Merged header cell spanning all frozen columns (row 1) */
+.stf-frozen-merged {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+/* Visual separator on last frozen column */
+.stf-frozen-last {
+  border-right: 2px solid #999;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.08);
 }
 
 /* Data rows — alternate striping (optional) */
 .stf-table tbody tr:nth-child(even) td {
-  background: #fafbfc;
+  background: #fafafa;
 }
 
 /* Ensure frozen data cells in striped rows keep their background */
 .stf-table tbody tr:nth-child(even) .stf-frozen {
-  background: #f0f1f3;
+  background: #f5f5f5;
 }
